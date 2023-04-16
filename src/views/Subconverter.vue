@@ -5,7 +5,7 @@
         <el-card style="margin-top:20px;max-width:800px;margin:auto;opacity:0.8;blackground-color:#0F4677;border-radius: 20px;">
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.4"/>
-            BYG订阅转换
+            つつの订阅转换
             <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
           </div>
           <el-container>
@@ -276,7 +276,7 @@ export default {
               {
                 label: "手选-NoURLTest",
                 value: "https://raw.githubusercontent.com/huage59420/BYG-ini/main/BYG-NoURLTest.ini"
-              }
+              },
             ]
           },
           {
@@ -515,8 +515,8 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash";
-    this.form.customBackend = "https://api.tsutsu.one/sub?";
-    this.form.remoteConfig = "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini";
+    this.form.customBackend = "https://api.ml1.one/sub?";
+    this.form.remoteConfig = "https://raw.githubusercontent.com/huage59420/BYG-ini/main/NoDnsLeak.ini";
     //this.getBackendVersion();
   },
   methods: {
