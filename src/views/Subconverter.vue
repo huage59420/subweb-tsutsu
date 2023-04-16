@@ -5,7 +5,7 @@
         <el-card style="margin-top:20px;max-width:800px;margin:auto;opacity:0.8;blackground-color:#0F4677;border-radius: 20px;">
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.4"/>
-            つつの订阅转换
+            BYG订阅转换
             <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
           </div>
           <el-container>
@@ -254,12 +254,31 @@ export default {
           "自动判断客户端": "auto",
         },
         customBackend: {
+          "白月光 (半官方后端)": "https://api.ml1.one/sub?",
           "つつの专属后端 (六核负载均衡-支持IPv4/IPv6)": "https://api.tsutsu.one/sub?",
         },
         backendOptions: [
+          { value: "https://api.ml1.one/sub?" },
           { value: "https://api.tsutsu.one/sub?" },
         ],
         remoteConfig: [
+          {
+            label: "自用配置",
+            options: [
+              {
+                label: "自用(NoDnsLeak)",
+                value: "https://raw.githubusercontent.com/huage59420/BYG-ini/main/NoDnsLeak.ini"
+              },
+              {
+                label: "自选-URLTest",
+                value: "https://raw.githubusercontent.com/huage59420/BYG-ini/main/BYG-URLTest.ini"
+              },
+              {
+                label: "手选-NoURLTest",
+                value: "https://raw.githubusercontent.com/huage59420/BYG-ini/main/BYG-NoURLTest.ini"
+              }
+            ]
+          },
           {
             label: "つつの专属规则",
             options: [
@@ -486,7 +505,7 @@ export default {
   },
   created() {
     // document.title = "Subscription Converter";
-    document.title = "つつの订阅转换";
+    document.title = "BYG订阅转换";
      this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
